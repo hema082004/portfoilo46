@@ -40,7 +40,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
   flex-wrap: wrap; 
 }
 
@@ -48,12 +48,12 @@ nav {
   width: 200px; 
   height: 200px;
   border-radius: 50%;
-  object-fit: cover;
 }
 
 .hero-text {
-  max-width: 500px;
+  max-width: 250px;
   text-align: left;
+  flex:1;
 }
 
 .highlight-blue {
@@ -83,6 +83,7 @@ section {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 20px;
+  justify-content: center;
 }
 
 .skills li {
@@ -121,7 +122,7 @@ section {
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 .contact-box {
-  margin-bottom: 30px; /* adds space below each field */
+  margin-bottom: 30px; 
 }
 
 .contact-box input,
@@ -153,7 +154,6 @@ section {
   background-color: #555;
 }
 
-
 footer {
   text-align: center;
   padding: 20px;
@@ -182,12 +182,40 @@ footer {
   margin-top: 30px;
 }
 .space-between {
-  margin-top: 50px; /* You can increase or decrease this value */
+  margin-top: 50px; 
 }
 .project-image {
-  width: 80%;      /* Reduce width */
+  width: 80%;      
   height: auto; 
-  max-width:400px;     /* Maintain aspect ratio */
+  max-width:400px;     
   border-radius: 10px;
   margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-card {
+    padding: 10px;
+  }
+
+  .contact-box input,
+  .contact-box textarea {
+    font-size: 14px;
+  }
+
+  footer {
+    position: static;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
